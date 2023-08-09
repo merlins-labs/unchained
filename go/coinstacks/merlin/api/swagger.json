@@ -12,8 +12,7 @@
     "license": {
       "name": "MIT",
       "url": "http://opensource.org/licenses/MIT"
-    },
-    "version": "0.2.1"
+    }
   },
   "paths": {
     "/": {
