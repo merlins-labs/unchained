@@ -6,7 +6,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/x/auth/signing"
 	"github.com/pkg/errors"
-	"github.com/shapeshift/unchained/coinstacks/osmosis"
+	"github.com/shapeshift/unchained/coinstacks/merlins"
 	"github.com/shapeshift/unchained/pkg/api"
 	"github.com/shapeshift/unchained/pkg/cosmos"
 	"golang.org/x/sync/errgroup"
@@ -14,7 +14,7 @@ import (
 
 type Handler struct {
 	*cosmos.Handler
-	HTTPClient *osmosis.HTTPClient
+	HTTPClient *merlins.HTTPClient
 }
 
 // Contains info about the running coinstack
@@ -125,7 +125,7 @@ func (h *Handler) GetValidator(address string) (*cosmos.Validator, error) {
 }
 
 func (h *Handler) ParseMessages(msgs []sdk.Msg, events cosmos.EventsByMsgIndex) []cosmos.Message {
-	return osmosis.ParseMessages(msgs, events)
+	return merlins.ParseMessages(msgs, events)
 }
 
 func (h *Handler) ParseFee(tx signing.Tx, txid string, denom string) cosmos.Value {

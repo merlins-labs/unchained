@@ -1,6 +1,6 @@
 // Package classification Osmosis Unchained API
 //
-// Provides access to osmosis chain data.
+// Provides access to merlins chain data.
 //
 // License: MIT http://opensource.org/licenses/MIT
 //
@@ -23,7 +23,7 @@ import (
 
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
-	"github.com/shapeshift/unchained/coinstacks/osmosis"
+	"github.com/shapeshift/unchained/coinstacks/merlins"
 	"github.com/shapeshift/unchained/internal/log"
 	"github.com/shapeshift/unchained/pkg/api"
 	"github.com/shapeshift/unchained/pkg/cosmos"
@@ -46,7 +46,7 @@ type API struct {
 	handler *Handler
 }
 
-func New(httpClient *osmosis.HTTPClient, wsClient *cosmos.WSClient, blockService *cosmos.BlockService, swaggerPath string) *API {
+func New(httpClient *merlins.HTTPClient, wsClient *cosmos.WSClient, blockService *cosmos.BlockService, swaggerPath string) *API {
 	r := mux.NewRouter()
 
 	handler := &Handler{
@@ -94,7 +94,7 @@ func New(httpClient *osmosis.HTTPClient, wsClient *cosmos.WSClient, blockService
 	r.HandleFunc("/", a.Root).Methods("GET")
 
 	r.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
-		api.HandleResponse(w, http.StatusOK, map[string]string{"status": "up", "coinstack": "osmosis", "connections": strconv.Itoa(manager.ConnectionCount())})
+		api.HandleResponse(w, http.StatusOK, map[string]string{"status": "up", "coinstack": "merlins", "connections": strconv.Itoa(manager.ConnectionCount())})
 	}).Methods("GET")
 
 	r.HandleFunc("/swagger", func(w http.ResponseWriter, r *http.Request) {

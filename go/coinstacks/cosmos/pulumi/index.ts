@@ -20,7 +20,7 @@ export = async (): Promise<Outputs> => {
             'daemon-rpc': { port: 26657, pathPrefix: '/rpc', stripPathPrefix: true },
           },
           configMapData: { 'tendermint.sh': readFileSync('../../../scripts/tendermint.sh').toString() },
-          volumeMounts: [ { name: 'config-map', mountPath: '/tendermint.sh', subPath: 'tendermint.sh' } ],
+          volumeMounts: [{ name: 'config-map', mountPath: '/tendermint.sh', subPath: 'tendermint.sh' }],
           startupProbe: {
             httpGet: { path: '/status', port: 26657 },
             periodSeconds: 30,

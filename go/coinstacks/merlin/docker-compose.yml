@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  api:
+    image: unchained-local-go
+    environment:
+      - GOCACHE=/tmp
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.merlins-api.rule=Host(`api.merlins.localhost`)'
+      - 'traefik.http.services.merlins-api.loadbalancer.server.port=3000'
+    command: ["-r", "(pkg|internal|merlins)", "-R", "swagger", "--", "sh", "-c", "swagger generate spec -w coinstacks/merlins -o coinstacks/merlins/api/swagger.json -x protoc-gen-openapiv2 -m && go run cmd/merlins/main.go -env cmd/merlins/.env"]
+    working_dir: /app
+    volumes:
+      - ../..:/app
+      - $GOPATH/pkg/mod/cache:/go/pkg/mod/cache
+    networks:
+      - merlins
+
+networks:
+  merlins:
+    name: merlins_default
+    external: true

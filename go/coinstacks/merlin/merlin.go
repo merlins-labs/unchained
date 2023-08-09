@@ -1,4 +1,4 @@
-package osmosis
+package merlins
 
 import (
 	"github.com/pkg/errors"

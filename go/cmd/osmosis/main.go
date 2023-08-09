@@ -8,8 +8,8 @@ import (
 
 	gammtypes "github.com/osmosis-labs/osmosis/v6/x/gamm/types"
 	lockuptypes "github.com/osmosis-labs/osmosis/v6/x/lockup/types"
-	"github.com/shapeshift/unchained/coinstacks/osmosis"
-	"github.com/shapeshift/unchained/coinstacks/osmosis/api"
+	"github.com/shapeshift/unchained/coinstacks/merlins"
+	"github.com/shapeshift/unchained/coinstacks/merlins/api"
 	"github.com/shapeshift/unchained/internal/config"
 	"github.com/shapeshift/unchained/internal/log"
 	"github.com/shapeshift/unchained/pkg/cosmos"
@@ -19,7 +19,7 @@ var (
 	logger = log.WithoutFields()
 
 	envPath     = flag.String("env", "", "path to env file (default: use os env)")
-	swaggerPath = flag.String("swagger", "coinstacks/osmosis/api/swagger.json", "path to swagger spec")
+	swaggerPath = flag.String("swagger", "coinstacks/merlins/api/swagger.json", "path to swagger spec")
 )
 
 // Config for running application
@@ -50,17 +50,17 @@ func main() {
 	encoding := cosmos.NewEncoding(gammtypes.RegisterInterfaces, lockuptypes.RegisterInterfaces)
 
 	cfg := cosmos.Config{
-		Bech32AddrPrefix:  "osmo",
-		Bech32PkPrefix:    "osmopub",
-		Bech32ValPrefix:   "osmovaloper",
-		Bech32PkValPrefix: "osmovalpub",
+		Bech32AddrPrefix:  "fury",
+		Bech32PkPrefix:    "furypub",
+		Bech32ValPrefix:   "furyvaloper",
+		Bech32PkValPrefix: "furyvalpub",
 		Encoding:          encoding,
 		LCDURL:            conf.LCDURL,
 		RPCURL:            conf.RPCURL,
 		WSURL:             conf.WSURL,
 	}
 
-	httpClient, err := osmosis.NewHTTPClient(cfg)
+	httpClient, err := merlins.NewHTTPClient(cfg)
 	if err != nil {
 		logger.Panicf("failed to create new http client: %+v", err)
 	}

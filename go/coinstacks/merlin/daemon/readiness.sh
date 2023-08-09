@@ -15,7 +15,7 @@ NUM_PEERS=$(echo $NET_INFO | jq -r '.result.n_peers')
 if [[ $IS_SYNCING == false && $CATCHING_UP == false ]]; then
   if (( $NUM_PEERS > 0 )); then
     latest_block_height=$(echo $STATUS | jq -r '.result.sync_info.latest_block_height')
-    best_reference_block_height=$(get_best_reference_block_height https://rpc.osmosis.zone https://osmosis-rpc.polkachu.com https://rpc-osmosis.keplr.app)
+    best_reference_block_height=$(get_best_reference_block_height https://rpc.merlins.zone https://merlins-rpc.polkachu.com https://rpc-merlins.keplr.app)
 
     # if node is reporting synced, double check against reference nodes
     reference_validation $latest_block_height $best_reference_block_height $BLOCK_HEIGHT_TOLERANCE

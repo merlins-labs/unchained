@@ -7,7 +7,7 @@
   ],
   "swagger": "2.0",
   "info": {
-    "description": "Provides access to osmosis chain data.",
+    "description": "Provides access to merlins chain data.",
     "title": "Osmosis Unchained API",
     "license": {
       "name": "MIT",
@@ -413,7 +413,7 @@
           "$ref": "#/definitions/Staking"
         }
       ],
-      "x-go-package": "github.com/shapeshift/unchained/coinstacks/osmosis/api"
+      "x-go-package": "github.com/shapeshift/unchained/coinstacks/merlins/api"
     },
     "ApiError": {
       "description": "Generic api error for handling failed requests",
@@ -702,7 +702,7 @@
           }
         }
       ],
-      "x-go-package": "github.com/shapeshift/unchained/coinstacks/osmosis/api"
+      "x-go-package": "github.com/shapeshift/unchained/coinstacks/merlins/api"
     },
     "InternalServerError": {
       "description": "Contains info about a 500 Internal Server Error response",

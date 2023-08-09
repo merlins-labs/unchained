@@ -1,4 +1,4 @@
-package osmosis
+package merlins
 
 import (
 	"strconv"
@@ -9,7 +9,7 @@ import (
 	"github.com/shapeshift/unchained/pkg/cosmos"
 )
 
-// ParseMessages will parse any osmosis or cosmos-sdk message types
+// ParseMessages will parse any merlins or cosmos-sdk message types
 func ParseMessages(msgs []sdk.Msg, events cosmos.EventsByMsgIndex) []cosmos.Message {
 	messages := []cosmos.Message{}
 
