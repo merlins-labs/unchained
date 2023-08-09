@@ -8,7 +8,7 @@
   "swagger": "2.0",
   "info": {
     "description": "Provides access to merlins chain data.",
-    "title": "Osmosis Unchained API",
+    "title": "Merlins Unchained API",
     "license": {
       "name": "MIT",
       "url": "http://opensource.org/licenses/MIT"
