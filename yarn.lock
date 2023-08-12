@@ -3041,8 +3041,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@shapeshiftoss/avalanche-api@workspace:node/coinstacks/avalanche/api"
   dependencies:
-    "@shapeshiftoss/blockbook": ^9.3.0
-    "@shapeshiftoss/common-api": ^9.3.0
+    "@shapeshiftoss/blockbook": ^9.5.0
+    "@shapeshiftoss/common-api": ^9.5.0
   languageName: unknown
   linkType: soft
 
@@ -3056,8 +3056,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@shapeshiftoss/bitcoin-api@workspace:node/coinstacks/bitcoin/api"
   dependencies:
-    "@shapeshiftoss/blockbook": ^9.3.0
-    "@shapeshiftoss/common-api": ^9.3.0
+    "@shapeshiftoss/blockbook": ^9.5.0
+    "@shapeshiftoss/common-api": ^9.5.0
     bech32: ^2.0.0
   languageName: unknown
   linkType: soft
@@ -3072,8 +3072,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@shapeshiftoss/bitcoincash-api@workspace:node/coinstacks/bitcoincash/api"
   dependencies:
-    "@shapeshiftoss/blockbook": ^9.3.0
-    "@shapeshiftoss/common-api": ^9.3.0
+    "@shapeshiftoss/blockbook": ^9.5.0
+    "@shapeshiftoss/common-api": ^9.5.0
     bech32: ^2.0.0
   languageName: unknown
   linkType: soft
@@ -3084,7 +3084,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@shapeshiftoss/blockbook@^9.3.0, @shapeshiftoss/blockbook@workspace:node/packages/blockbook":
+"@shapeshiftoss/blockbook@^9.5.0, @shapeshiftoss/blockbook@workspace:node/packages/blockbook":
   version: 0.0.0-use.local
   resolution: "@shapeshiftoss/blockbook@workspace:node/packages/blockbook"
   dependencies:
@@ -3097,8 +3097,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@shapeshiftoss/bnbsmartchain-api@workspace:node/coinstacks/bnbsmartchain/api"
   dependencies:
-    "@shapeshiftoss/blockbook": ^9.3.0
-    "@shapeshiftoss/common-api": ^9.3.0
+    "@shapeshiftoss/blockbook": ^9.5.0
+    "@shapeshiftoss/common-api": ^9.5.0
   languageName: unknown
   linkType: soft
 
@@ -3122,11 +3122,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@shapeshiftoss/common-api@^9.3.0, @shapeshiftoss/common-api@workspace:node/coinstacks/common/api":
+"@shapeshiftoss/common-api@^9.5.0, @shapeshiftoss/common-api@workspace:node/coinstacks/common/api":
   version: 0.0.0-use.local
   resolution: "@shapeshiftoss/common-api@workspace:node/coinstacks/common/api"
   dependencies:
-    "@shapeshiftoss/blockbook": ^9.3.0
+    "@shapeshiftoss/blockbook": ^9.5.0
     "@types/uuid": ^8.3.4
     "@types/ws": ^8.5.3
     bignumber.js: ^9.1.1
@@ -3146,8 +3146,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@shapeshiftoss/dogecoin-api@workspace:node/coinstacks/dogecoin/api"
   dependencies:
-    "@shapeshiftoss/blockbook": ^9.3.0
-    "@shapeshiftoss/common-api": ^9.3.0
+    "@shapeshiftoss/blockbook": ^9.5.0
+    "@shapeshiftoss/common-api": ^9.5.0
     bech32: ^2.0.0
   languageName: unknown
   linkType: soft
@@ -3162,8 +3162,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@shapeshiftoss/ethereum-api@workspace:node/coinstacks/ethereum/api"
   dependencies:
-    "@shapeshiftoss/blockbook": ^9.3.0
-    "@shapeshiftoss/common-api": ^9.3.0
+    "@shapeshiftoss/blockbook": ^9.5.0
+    "@shapeshiftoss/common-api": ^9.5.0
   languageName: unknown
   linkType: soft
 
@@ -3177,8 +3177,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@shapeshiftoss/gnosis-api@workspace:node/coinstacks/gnosis/api"
   dependencies:
-    "@shapeshiftoss/blockbook": ^9.3.0
-    "@shapeshiftoss/common-api": ^9.3.0
+    "@shapeshiftoss/blockbook": ^9.5.0
+    "@shapeshiftoss/common-api": ^9.5.0
   languageName: unknown
   linkType: soft
 
@@ -3192,8 +3192,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@shapeshiftoss/litecoin-api@workspace:node/coinstacks/litecoin/api"
   dependencies:
-    "@shapeshiftoss/blockbook": ^9.3.0
-    "@shapeshiftoss/common-api": ^9.3.0
+    "@shapeshiftoss/blockbook": ^9.5.0
+    "@shapeshiftoss/common-api": ^9.5.0
     bech32: ^2.0.0
   languageName: unknown
   linkType: soft
@@ -3211,9 +3211,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@shapeshiftoss/merlins-pulumi@workspace:go/coinstacks/merlin/pulumi":
+"@shapeshiftoss/merlins-pulumi@workspace:go/coinstacks/merlins/pulumi":
   version: 0.0.0-use.local
-  resolution: "@shapeshiftoss/merlins-pulumi@workspace:go/coinstacks/merlin/pulumi"
+  resolution: "@shapeshiftoss/merlins-pulumi@workspace:go/coinstacks/merlins/pulumi"
   languageName: unknown
   linkType: soft
 
@@ -3222,8 +3222,8 @@ __metadata:
   resolution: "@shapeshiftoss/optimism-api@workspace:node/coinstacks/optimism/api"
   dependencies:
     "@eth-optimism/contracts-bedrock": ^0.14.0
-    "@shapeshiftoss/blockbook": ^9.3.0
-    "@shapeshiftoss/common-api": ^9.3.0
+    "@shapeshiftoss/blockbook": ^9.5.0
+    "@shapeshiftoss/common-api": ^9.5.0
     bignumber.js: ^9.1.1
   languageName: unknown
   linkType: soft
@@ -3234,12 +3234,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@shapeshiftoss/osmosis-pulumi@workspace:go/coinstacks/osmosis/pulumi":
+  version: 0.0.0-use.local
+  resolution: "@shapeshiftoss/osmosis-pulumi@workspace:go/coinstacks/osmosis/pulumi"
+  languageName: unknown
+  linkType: soft
+
 "@shapeshiftoss/polygon-api@workspace:node/coinstacks/polygon/api":
   version: 0.0.0-use.local
   resolution: "@shapeshiftoss/polygon-api@workspace:node/coinstacks/polygon/api"
   dependencies:
-    "@shapeshiftoss/blockbook": ^9.3.0
-    "@shapeshiftoss/common-api": ^9.3.0
+    "@shapeshiftoss/blockbook": ^9.5.0
+    "@shapeshiftoss/common-api": ^9.5.0
   languageName: unknown
   linkType: soft
 
